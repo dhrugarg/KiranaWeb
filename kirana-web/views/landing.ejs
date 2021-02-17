@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kirana Web</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+		<link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">kirana Web</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+			<% if(!currentUser){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login <i class="fas fa-sign-in-alt"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Sign Up <i class="fas fa-user-plus"></i></a>
+          </li>
+			<% } else { %>
+		 
+		  <li class="nav-item">
+		    <a class='nav-link' href="#"><%= currentUser.username %></a>
+		  </li>
+			 <li class="nav-item">
+            <a class="nav-link" href="#">My cart <i class="fas fa-shopping-cart"></i></a>
+          </li>
+			 <li class="nav-item">
+            <a class="nav-link" href="/logout">Log out <i class="fas fa-sign-out-alt"></i></a>
+          </li>
+			<% } %>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 id='mainheading' class="display-4 text-white mt-5 mb-2">Kirana Web <i class="fab fa-amazon"></i></h1>
+          <p id='tagline'class="lead mb-5 text-white-50">Apne ghar ki dukan</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>What We Do</h2>
+        <hr>
+        <p>KIRANA WEB, is the platform which creates the Network of Kirana Shops and help them to increase their sale.We provides services related to Kirana, FMCG products and Fruits and Vegetables.</p>
+        <p>In Todays era no one have time to go to shop and wait until their order get packed.Shopkeeper get frustrated during Festival time due to work load and overcrowding.Even many customers get back to their home due to que or buy from somewhere else.Sometime customer needs kirana urgently.So after looking all these problems Kirana Web works to tackle these all and many other problems like that.</p>
+        <a class="btn btn-primary btn-lg" href="/main"><i class="fas fa-shopping-bag"></i> Shop now</a>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Contact Us</h2>
+        <hr>
+        <address>
+          <strong>Dhruv Garg</strong>
+          <br>467 malyana
+          <br>Meerut 250002
+          <br>
+        </address>
+        <address>
+          <abbr title="Phone">Phone:</abbr>
+          9675139612
+          <br>
+          <abbr title="Email">Email:</abbr>
+          <a href="mailto:#">dhruvgargmrt@gmail.com</a>
+        </address>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+<!-- cards with carousel -->
+		<div class="container text-center my-3">
+    <h2 class="font-weight-light">Our shop patners</h2>
+    <div class="row mx-auto my-auto">
+        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox">
+                <div class="carousel-item active">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dtdoifvrm/image/upload/v1594812276/IMG-20200713-WA0046_dbmy2j.jpg">
+							<div class='card-body'>
+								<h5 class="card-title">Lakshmi store</h5>
+								<p class="card-text">This is best place to order groceries </p>
+								<a href="#" class="btn btn-primary">Order now</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dtdoifvrm/image/upload/v1594812275/IMG-20200713-WA0047_qqp8iw.jpg">
+							<div class='card-body'>
+								<h5 class="card-title">Shivam store</h5>
+								<p class="card-text">This is best place to order groceries </p>
+								<a href="#" class="btn btn-primary">Order now</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                         <div class="card">
+                            <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dtdoifvrm/image/upload/v1594812275/IMG-20200713-WA0045_dw0yyl.jpg">
+							<div class='card-body'>
+								<h5 class="card-title">Kumar store</h5>
+								<p class="card-text">This is best place to order groceries </p>
+								<a href="#" class="btn btn-primary">Order now</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dtdoifvrm/image/upload/v1594812274/IMG-20200713-WA0048_rpil4h.jpg">
+							<div class='card-body'>
+								<h5 class="card-title">Jai lakshmi traders</h5>
+								<p class="card-text">This is best place to order groceries </p>
+								<a href="#" class="btn btn-primary">Order now</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                         <div class="card">
+                            <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dtdoifvrm/image/upload/v1594812448/IMG-20200713-WA0077_yaqqhq.jpg">
+							<div class='card-body'>
+								<h5 class="card-title">Shivam store</h5>
+								<p class="card-text">This is best place to order groceries </p>
+								<a href="#" class="btn btn-primary">Order now</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                         <div class="card">
+                            <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dtdoifvrm/image/upload/v1594812445/IMG-20200713-WA0076_pvd4rh.jpg">
+							<div class='card-body'>
+								<h5 class="card-title">Rinku store</h5>
+								<p class="card-text">This is best place to order groceries </p>
+								<a href="#" class="btn btn-primary">Order now</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- <h5 class="mt-2">Advances one slide at a time</h5> -->
+</div>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Lavish saini</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script>
+		$('#recipeCarousel').carousel({
+    interval: 2000
+})
+
+$('.carousel .carousel-item').each(function() {
+    var minPerSlide = 3;
+    var next = $(this).next();
+    if (!next.length) {
+        next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    for (var i = 0; i < minPerSlide; i++) {
+        next = next.next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+
+        next.children(':first-child').clone().appendTo($(this));
+    }
+});
+		</script>
+<%- include("partials/footer") %>

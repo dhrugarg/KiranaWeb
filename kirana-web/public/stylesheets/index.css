@@ -1,0 +1,74 @@
+/* .active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan input.form-control[type=text] {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan .fa, .active-cyan-2 .fa {
+  color: #4dd0e1;
+} */
+/* Styles for wrapping the search box */
+
+/* .main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+
+body{
+	margin-top: 85px;
+}
+
+/* card with carousal css */
+.owl-prev{
+	left: -30px;
+}
+.owl-next{
+	right: -30px;
+}
+.owl-prev, .owl-next{
+	position: absolute;
+	top: 30%;
+}
+.owl-prev span, .owl-next span {
+	font-size:60px;
+	color: #787878;
+}
+.owl-theme .owl-nav [class+='owl-']:hover {
+	background-color: transparent;
+}
+
+.cardimages{
+	height :300px;
+	overflow:hidden;
+}
+
+/* adjust height of images of card  */
+.img-fluid{
+	height :300px;
+	overflow:hidden;
+}
+
+a {
+	color: rgba(0,0,0,.5);
+}

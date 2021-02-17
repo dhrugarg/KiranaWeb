@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kirana Web</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/index.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+		<link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+  <!-- Navigation nav bar-->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-5">
+    <div class="container">
+		<a class="navbar-brand" href="/">kirana Web</a>
+		<form class="form-group has-search mt-2">
+			<span class="fa fa-search form-control-feedback"></span>
+			<input type="text" class="form-control" placeholder="Search">
+ 		</form>
+		<div class="nav-item dropdown fixed-right">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+				Category
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="/beverageAndSnacks">Beverages and Snacks</a>
+				<a class="dropdown-item" href="/grocery">Grocery</a>
+				<a class="dropdown-item" href="/dairy">Milk products</a>
+				<a class="dropdown-item" href="/pulsesAndSpice">Pulses or spices</a>
+				<a class="dropdown-item" href="/personalCare">Personal care</a>
+				<a class="dropdown-item" href="/householdCare">Household care</a>
+			  </div>
+		</div>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+		  
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+		  <li class="nav-item">
+            <a class="nav-link" href="/login">Choose store <i class="fas fa-map-marker-alt"></i>    </a>
+          </li>
+		 
+			<% if(!currentUser){ %>
+         
+         
+			<% } else { %>
+		 
+		  <li class="nav-item">
+		    <a class='nav-link' href="#"><%= currentUser.username %> <i class="fas fa-user-alt"></i></a>
+		  </li>
+			 <li class="nav-item">
+            <a class="nav-link" href="/cart">cart <i class="fas fa-shopping-cart"> </i><span class='badge badge-pill badge-secondary'><%= session.cart.totalQty%></span>			
+			</a>
+			</li>
+			 <li class="nav-item">
+            <a class="nav-link" href="/logout">Log out <i class="fas fa-sign-out-alt"></i></a>
+          </li>
+			<% } %>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Contact <i class="fas fa-phone-alt"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
